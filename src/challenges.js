@@ -89,13 +89,45 @@ function fizzBuzz(arrayNum) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(words) {
+  let wordarray = words.split('')
+  for (index = 0; index < wordarray.length; index += 1) {
+    if (wordarray[index] === 'a') {
+      wordarray[index] = 1;
+    } else if (wordarray[index] === 'e') {
+      wordarray[index] = 2;
+    } else if (wordarray[index] === 'i') {
+      wordarray[index] = 3;
+    } else if (wordarray[index] === 'o') {
+      wordarray[index] = 4;
+    } else if (wordarray[index] === 'u') {
+      wordarray[index] = 5;
+    } 
+  }
+  let string = wordarray.join('');
+  return string;
 }
-function decode() {
-  // seu código aqui
-}
+console.log(encode("hi there!"));
 
+function decode(word2) {
+  let wordNum = word2.split('')
+  for (index = 0; index < wordNum.length; index += 1) {
+    if (wordNum[index] === '1') {
+      wordNum[index] = 'a';
+    } else if (wordNum[index] === '2') {
+      wordNum[index] = 'e';
+    } else if (wordNum[index] === '3') {
+      wordNum[index] = 'i';
+    } else if (wordNum[index] === '4') {
+      wordNum[index] = 'o';
+    } else if (wordNum[index] === '5') {
+      wordNum[index] = 'u';
+    } 
+  }
+  let num = wordNum.join('');
+  return num;
+}
+console.log(decode("h3 th2r2!"));
 module.exports = {
   calcArea,
   catAndMouse,
