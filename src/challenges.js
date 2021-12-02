@@ -21,11 +21,12 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let element = (array[array.length - 1]);
-  let virgula = ',';
+  let virgula = ', ';
   let element2 = (array[0]);
   let concat = element + virgula + element2;
   return concat;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
