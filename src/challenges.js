@@ -2,10 +2,10 @@
 function compareTrue(a, b) {
   if (a == true && b == true) {
     return true;
-  } 
+  } else {
     return false;
   }
-
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,7 +21,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let element = (array[array.length - 1]);
-  let virgula = ', ';
+  let virgula = ',';
   let element2 = (array[0]);
   let concat = element + virgula + element2;
   return concat;
