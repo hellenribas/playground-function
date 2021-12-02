@@ -26,12 +26,14 @@ function concatName(array) {
   let concat = element + virgula + element2;
   return concat;
 }
-let testando = ['foguete', 'não', 'tem', 'ré'];
-console.log(concatName(testando));
-// Desafio 5
-function footballPoints() {
-}
 
+// Desafio 5
+function footballPoints(wins, ties) {
+  let pontoTies = ties;
+  let pontoWin = wins * 3;
+  let result = pontoTies + pontoWin;
+  return result;
+}
 // Desafio 6
 function highestCount() {
   // seu código aqui
