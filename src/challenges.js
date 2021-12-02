@@ -40,8 +40,8 @@ function highestCount(arrayNumber) {
   let cont = 0;
   let contElem = 0;
   for(index = 0; index < arrayNumber.length; index+=1) {
-    if (arrayNumber[index + 1] >= arrayNumber[index]) {
-      cont = index;
+    if (arrayNumber[index + 1] === arrayNumber[index]) {
+      
     }
   }
   for (elem = 0; elem < arrayNumber.length; elem += 1) {
@@ -51,7 +51,7 @@ function highestCount(arrayNumber) {
   }
     return contElem;
   }
-console.log(highestCount([0, 4, 4, 4, 3, 2, 1]));
+console.log(highestCount([0, 4, 4, 4, 2, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -68,9 +68,25 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1, 4, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(arrayNum) {
+  let arrayString = [];
+  for (indice = 0; indice < arrayNum.length; indice += 1) {
+    if ((arrayNum[indice]) % 3 === 0 && (arrayNum[indice]) % 5 === 0) {
+      arrayString.push("fizzBuzz");
+    } else if ((arrayNum[indice]) % 5 === 0) {
+      arrayString.push("buzz");
+    } else if ((arrayNum[indice]) % 3 === 0) {
+      arrayString.push("fizz");
+    } else {
+      arrayString.push("bug!")
+    }
+      
+    }
+    return arrayString
+  }
+  let tes = [2, 15, 7, 9, 45]
+  console.log(fizzBuzz(tes));
+
 
 // Desafio 9
 function encode() {
