@@ -2,10 +2,10 @@
 function compareTrue(a, b) {
   if (a == true && b == true) {
     return true;
-  } else {
+  } 
     return false;
   }
-}
+
 
 // Desafio 2
 function calcArea(base, height) {
@@ -17,16 +17,19 @@ function splitSentence(string) {
   let conversor = string.split(' ');
   return conversor;
 }
-console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let element = (array[array.length - 1]);
+  let virgula = ', ';
+  let element2 = (array[0]);
+  let concat = element + virgula + element2;
+  return concat;
 }
-
+let testando = ['foguete', 'não', 'tem', 'ré'];
+console.log(concatName(testando));
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
 }
 
 // Desafio 6
