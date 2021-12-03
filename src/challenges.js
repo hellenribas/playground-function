@@ -37,21 +37,22 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount(arrayNumber) {
-  let cont = 0;
-  let contElem = 0;
-  for(index = 0; index < arrayNumber.length; index+=1) {
-    if (arrayNumber[index + 1] === arrayNumber[index]) {
-      
-    }
+let cont = 0;
+let maiorNum = arrayNumber[0];
+for (let index = 0; index < arrayNumber.length; index += 1) {
+  let num = arrayNumber[index]
+  if ( num > maiorNum) {
+       maiorNum = num      
   }
-  for (elem = 0; elem < arrayNumber.length; elem += 1) {
-    if (arrayNumber[cont] === arrayNumber[elem]) {
-      contElem = contElem + 1;
-    }
+}
+for (let index2 = 0; index2 < arrayNumber.length; index2 += 1) {
+  if (maiorNum === arrayNumber[index2]) {
+    cont += 1;
   }
-    return contElem;
-  }
-console.log(highestCount([0, 4, 4, 4, 2, 2, 1]));
+}
+  return cont
+}
+console.log(highestCount([0, 4, 4, 4, 2, 2, 2, 2]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -128,6 +129,17 @@ function decode(word2) {
   return num;
 }
 console.log(decode("h3 th2r2!"));
+
+function listadetech (tech, name) {
+  let obj = [];
+  for ( index = 0; index < tech.length; index += 1) {
+    obj.push({});
+  }
+  for (let key of tech) {
+     obj.push[key]
+  }
+}
+
 module.exports = {
   calcArea,
   catAndMouse,
