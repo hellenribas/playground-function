@@ -56,10 +56,27 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 console.log(triangleCheck(2, 3, 4));
+
 // Desafio 13
-function hydrate(lineA, lineB, lineC) {
-  // seu código aqui
-}
+function hydrate(stringBar) {
+  let dig = /\d+/g;
+  let num = stringBar.match(dig);
+  // console.log(numTrue);
+  let agua = 0;
+  if (num.length === 1) {
+    agua = '1';
+    return agua + ' copo de água'; 
+  }
+  else if (num.length > 1) {
+    for (let index = 0; index < num.length; index += 1) {
+    let numTrue = parseInt(num[index]);
+      agua = agua + numTrue;
+    }
+    let aguaS = agua.toString();
+    return aguaS + ' copos de água';
+  }
+  }
+  console.log(hydrate('1 cachaça, 2 vinhos'));
 
 module.exports = {
   generatePhoneNumber,
