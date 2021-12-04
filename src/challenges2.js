@@ -28,24 +28,51 @@ function generatePhoneNumber(arrayN) {
   let ddd = 0;
   let phone = [];
   let numberphone = 0;
-  if (arrayN.length === 11) {
-    for (index = 0; index < 1; index += 1) {
-       ddd = '(' + arrayN[index] + arrayN[index + 1] + ')' + ' ';
+  let numrep = 0;
+  let cont= 0;
+  if (arrayN.length !== 11) {
+    return "Array com tamanho incorreto." 
   }
+ for (let index = 0; index < arrayN.length; index += 1) {
+   cont = 0;
+   numrep = arrayN[index]
+    if (arrayN[index] < 0) {
+      return  "não é possível gerar um número de telefone com esses valores"
+      
+    } else if (arrayN[index] > 9) {
+       return "não é possível gerar um número de telefone com esses valores"
+       
+    }
+     for (elem = 0; elem < arrayN.length; elem += 1) {
+      if (arrayN[elem] === numrep) {
+          cont += 1
+          if (cont >= 3) {
+            return "não é possível gerar um número de telefone com esses valores"
+            
+          }
+      }
+    }
+  } 
+    for (index = 0; index < 1; index += 1) {
+      ddd = '(' + arrayN[index] + arrayN[index + 1] + ')' + ' ';
+    }
     for (index = 2; index < 7; index += 1) {
-      phone.push(arrayN[index]);
+     phone.push(arrayN[index]);
     }
     phone.push("-");
     for (index = 7; index < arrayN.length; index += 1) {
-      phone.push(arrayN[index]);
-
+     phone.push(arrayN[index]);
+    
+    }
+    let phone2 = phone.join(``);
+    numberphone = ddd + phone2;
+    return numberphone;
   }
-  phone.join();
-  numberphone = ddd + phone;
-} 
-return numberphone;
-}
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+  
+
+
+
+console.log(generatePhoneNumber([1, 5, 7, 4, -1, 5, 1, 8, 9, 3, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
